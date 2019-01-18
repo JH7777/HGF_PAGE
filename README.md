@@ -32,7 +32,7 @@ P(A|B)=\frac { P(B|A)P(A) }{ P(B) }
 ### Reinforcement Learning (RL)
 [[연합강도 그림]] </br>
 고전적 조건형성에서 CS와 UCS의 연합강도를 V라고 둘 수 있다. 이 연합강도 V는 시행이 반복될 수록 강해지지만 무작정 강해지지는 않고 그림에서 볼 수 있듯이 로그 함수꼴로 증가한다. 이 때 시행을 한 번 할 때마다 연합강도의 변화량을 \Delta V라고 하면 \Delta V_n \sim  V_{max}-V_n, 즉 \Delta V는 V_{max}-V_n에 비례한다. </br>
-이 식은 최대 연합강도와 현재의 연합강도의 차이가 클 때는 학습이 빨리 일어나지만 현재의 연합강도가 최대 연합강도와 비슷할 때는 학습이 잘 되지 않음을 의미한다. 이 때, 상수 C를 포함시키면 이 식은 \Delta V_n=c(V_{max}-V_n)로 나타낼 수 있는데, c는 learning rate *(individual 마다 다른 값을 가진다)* 이다. </br></br>
+이 식은 최대 연합강도와 현재의 연합강도의 차이가 클 때는 학습이 빨리 일어나지만 현재의 연합강도가 최대 연합강도와 비슷할 때는 학습이 잘 되지 않음을 의미한다. </br>이 때, 상수 C를 포함시키면 이 식은 \Delta V_n=c(V_{max}-V_n)로 나타낼 수 있는데, c는 learning rate *(individual 마다 다른 값을 가진다)* 이다. </br></br>
 이 이론은 다음과 같은 특징을 지닌다.
 - Bayesian learning이 normative framework를 가지고 있는 반면, Reinforcement Learning은 descriptive 접근법을 사용한다. 즉, 어떠한 확률 이론을 가정하지 않고 그저 agent가 다른 자극과 행동으로부터 "value"를 학습하는 과정을 기술한다. 따라서 조현병과 우을증과 같은 일탈적 학습도 모델링 할 수 있다.
 - 개념적으로 간단하고 계산이 간편하다.
