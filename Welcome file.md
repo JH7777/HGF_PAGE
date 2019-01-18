@@ -28,6 +28,7 @@
 <ul>
 <li>Bayesian learning이 normative framework를 가지고 있는 반면, Reinforcement Learning은 descriptive 접근법을 사용한다. 즉, 어떠한 확률 이론을 가정하지 않고 그저 agent가 다른 자극과 행동으로부터 "value"를 학습하는 과정을 기술한다. 따라서 조현병과 우을증과 같은 일탈적 학습도 모델링 할 수 있다.</li>
 <li>개념적으로 간단하고 계산이 간편하다.</li>
+<li>Bayesian learning에서는 inter-individual variability를 무시하는 것과는 달리 c라는 individual 마다 달라지는 값이 포함된다.</li>
 </ul>
 <p> 그러나 이 이론에도 중요한 단점이 있다.</p>
 <ul>
