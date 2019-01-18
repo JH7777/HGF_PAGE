@@ -41,6 +41,7 @@
 <li>다른 Bayesian learning scheme처럼 sensory signal이 어떻게 발생하는지에 대한 확률적인 가정을 한다.</li>
 <li>Gaussian random walk로 업데이트되는 위계적 상태를 구성한다. 이 때, 각 walk의 step size는 위계의 다음 highest level로 부터 결정된다.</li>
 <li>각 위계의 바로 전 level과 바로 다음 level을 연결하는 parameter를 통해 <strong>individual difference를 나타낸다.</strong></li>
-<li>이 모델은 <em>mean-field approximation</em> 과 <em>Laplace approximation</em> 등을 사용하여 parameter을 추정한다. <strong>(기존의 Bayesian model이 복잡한 적분식을 포함한 것과 달리 간단히 계산할 수 있다)</strong> 이 때 계산된 parameter값은 RL 모델과 유사한 형태로 나타난다.</li>
+<li>이 모델은 <em>mean-field approximation</em> 과 <em>Laplace approximation</em> 등을 사용하여 parameter을 추정한다. <strong>(기존의 Bayesian model이 복잡한 적분식을 포함한 것과 달리 간단히 계산할 수 있다)</strong></li>
+<li>이 때 계산된 parameter값은 RL 모델과 유사한 형태로 나타난다.</li>
 </ul>
 
