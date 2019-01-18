@@ -1,11 +1,11 @@
 # HGF (Hierarchical Gaussian Filter)
-## 1. 왜 HGF를 사용하는가
+# 1. 왜 HGF를 사용하는가
 학습은 주변 환경에 대한 agent의 믿음이 이미 알고 있던 정보와 새로운 정보를 통합함으로써 향상되는 과정으로 이해할 수 있다. 
 
 
 이러한 학습을 이해하는데 현재 크게 두가지의 메커니즘(Reinforcement Learning, Bayesian Learning)이 사용된다. 그러나 이 두 메커니즘은 각각 여러가지 단점을 가진다. 여기서 설명할 HGF는 그러한 단점을 보완하기 위하여 설계되었다. 먼저 각각의 알고리즘이 무엇인지, 그리고 단점은 어떤 것이 있는지 살펴보자.
 
-### Bayesian Learning
+## Bayesian Learning
 
 
 P(A|B)=\frac { P(B|A)P(A) }{ P(B) } 
@@ -29,7 +29,7 @@ P(A|B)=\frac { P(B|A)P(A) }{ P(B) }
 2. Bayesian leaning은 정보가 어떻게 다루어져야 하는지를 규정하는 normative framework를 구성한다. 그러나 실제 상황에서는 만약 모든 agent가 같은 prior knowledge를 가지고 있더라도 새로운 정보를 똑같이 받아들이지 않는다. 즉, Bayesian Learning은 inter-individual variability를 무시한다.*(베이즈 정리 식에서 individual 정보를 주는 부분은 없다.)*
 
 
-### Reinforcement Learning (RL)
+## Reinforcement Learning (RL)
 [[연합강도 그림]] </br>
 고전적 조건형성에서 CS와 UCS의 연합강도를 V라고 둘 수 있다. 이 연합강도 V는 시행이 반복될 수록 강해지지만 무작정 강해지지는 않고 그림에서 볼 수 있듯이 로그 함수꼴로 증가한다. 이 때 시행을 한 번 할 때마다 연합강도의 변화량을 \Delta V라고 하면 \Delta V_n \sim  V_{max}-V_n, 즉 \Delta V는 V_{max}-V_n에 비례한다. </br>
 이 식은 최대 연합강도와 현재의 연합강도의 차이가 클 때는 학습이 빨리 일어나지만 현재의 연합강도가 최대 연합강도와 비슷할 때는 학습이 잘 되지 않음을 의미한다. </br>이 때, 상수 C를 포함시키면 이 식은 \Delta V_n=c(V_{max}-V_n)로 나타낼 수 있는데, c는 learning rate *(individual 마다 다른 값을 가진다)* 이다. </br></br>
