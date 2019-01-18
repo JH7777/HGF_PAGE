@@ -41,3 +41,10 @@ P(A|B)=\frac { P(B|A)P(A) }{ P(B) }
 - 확률 이론을 따르지 않는 heuristic한 접근법이기 때문에 환경적 상태와 행동의 결과가 agent에게 알려지지 않은 채로 학습해야 하는 실제 상황에 잘 맞지 않는다.
 
 `따라서 업데이트된 Bayesian model(HGF)을 통하여 Bayesian 모델과 RL 모델의 단점을 극복하고자 하였다. 또한 이렇게 업데이트된 Bayesian 식은 RL 모델과 유사한 형태를 띄게 된다.`
+
+## HGF
+업데이트된 Bayesian model(HGF)은 다음과 같은 특징을 지닌다.
+- 다른 Bayesian learning scheme처럼 sensory signal이 어떻게 발생하는지에 대한 확률적인 가정을 한다.
+- Gaussian random walk로 업데이트되는 위계적 상태를 구성한다. 이 때, 각 walk의 step size는 위계의 다음 highest level로 부터 결정된다.
+- 각 위계의 바로 전 level과 바로 다음 level을 연결하는 parameter를 통해 individual difference를 나타낸다.
+- 이 모델은 *mean-field approximation* 과 *Laplace approximation* 등을 사용하여 parameter을 추정한다. 이 때 계산된 parameter값은 RL 모델과 유사한 형태로 나타난다.
