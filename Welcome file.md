@@ -43,5 +43,6 @@
 <li>각 위계의 바로 전 level과 바로 다음 level을 연결하는 parameter를 통해 <strong>individual difference를 나타낸다.</strong> (level을 연결하는 parameter가 individual마다 다르다고 가정한다.)</li>
 <li>이 모델은 <em>mean-field approximation</em> 과 <em>Laplace approximation</em> 등을 사용하여 parameter을 추정한다. <strong>(기존의 Bayesian model이 복잡한 적분식을 포함한 것과 달리 간단히 계산할 수 있다).</strong>  따라서 기존의 Bayesian model이 복잡한 적분식을 포함한 것과는 달리 계산이 간편하다. 이는 parameter에 대한  실시간 추론을 가능하게 한다.</li>
 <li>이 모델로 계산된 parameter값은 RL 모델과 유사한 형태로 나타난다. 이는 learning rate, prediction error과 같은 RL heuristics를 원칙에 입각한 (Bayesian) framework에 두는 해석을 가능하게 한다.</li>
+<li>상태(state)가 이산/연속인 경우 모두에 대하여 적용 가능하고 환경적 원인과 지각적 결과에 대하여 deterministic/probabilistic mapping이 가능하다.(perceptual uncertainty가 있는 상황과 없는 상황 모두를 다룰 수 있다.)</li>
 </ul>
 
