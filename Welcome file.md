@@ -3,7 +3,6 @@
 
 ---
 
-<h1 id="hgf-hierarchical-gaussian-filter">HGF (Hierarchical Gaussian Filter)</h1>
 <h1 id="왜-hgf를-사용하는가">1. 왜 HGF를 사용하는가</h1>
 <p>학습은 주변 환경에 대한 agent의 믿음이 이미 알고 있던 정보와 새로운 정보를 통합함으로써 향상되는 과정으로 이해할 수 있다.</p>
 <p>이러한 학습을 이해하는데 현재 크게 두가지의 메커니즘(<em><strong>Reinforcement Learning, Bayesian Learning</strong></em>)이 사용된다. 그러나 이 두 메커니즘은 각각 여러 단점을 가진다. 여기서 설명할 HGF는 그러한 단점을 보완하기 위하여 설계되었다. 먼저 각각의 알고리즘이 무엇인지, 그리고 단점은 어떤 것이 있는지 살펴보자.</p>
