@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/lion.png">
+    <title>HGF</title>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@coreui/coreui@2.0.0-rc.1/dist/js/coreui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js" integrity="sha256-Z1d5nX6+IwGjjkkYg+fWe/jzvJae4NYejTz7PcIumxE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+    <script src="lib/scheduler.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.1.1/sprintf.min.js" integrity="sha256-eVgCKximJ7hwWhTBw52jq3541BGK6y88M79oQxJt4Jk=" crossorigin="anonymous"></script>
+    <script src="lib/selectize.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui@2.0.0-rc.1/dist/css/coreui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+    <link rel="stylesheet" href="lib/selectize.css">
+
+    <script>
+        const config = {
+            databaseURL: "https://HGF-8230.firebaseio.com/",
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="timeline.js"></script>
+    <script src="addschedule.js"></script>
+
+    <style>
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+        }
+	#timeline_today {
+            padding: 0;
+        }
+        #timeline_today .fc-day-header {
+            display: none;
+        }
+        #timeline_today .fc-event {
+            cursor: pointer;
+        }
+
+        .aside-menu {
+            overflow: hidden;
+        }
+        .aside-menu {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="app sidebar-show aside-menu-show">
+    <header class="app-header navbar">
+        <button id="btn_toggle_nav" class="navbar-toggler aside-menu-toggler">
+            <span class="fas fa-bars" style="color: #777;"></span>
+        </button>
+	<div style="margin:auto">
+        <font size="6em">Hierarchical Gaussian Filter</font>
+       
+    </header>
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#" id="a_HGF1" class="nav-link active">
+                            왜 HGF를 사용하는가
+                        </a>
+		    </li>
+                    <li class="nav-item">
+                        <a href="#" id="a_HGF2" class="nav-link">
+                            HGF 모델 설명
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" id="a_HGF3" class="nav-link">
+                            Variational inversion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" id="a_HGF4" class="nav-link">
+                            Rstan을 이용한 시뮬레이션
+                        </a>
+		    </li>
+                </ul>
+            </nav>
+        </div>
+        <main class="main">
+        </main>
+        
+  
+        
+
+    <script>
+        $(() => {
+            const $container = $('main');
+            function setActive(curr) {
+                $('.sidebar-nav .nav-link').removeClass('active');
+                $(curr).addClass('active');
+            }
+	    $container.html(
+                    $('<object data="HGF1.html" style="background-color:#f9f9f9" type="text/html" width=100% height=99%>')
+                );
+            $('#a_HGF1').click(() => {
+                setActive('#a_HGF1');
+                $container.html(
+                    $('<object data="HGF1.html" style="background-color:#f9f9f9" type="text/html" width=100% height=99%>')
+                );
+            });
+            $('#a_HGF2').click(() => {
+                setActive('#a_HGF2');
+                $container.html(
+                    $('<object data="HGF2.html" style="background-color:#f9f9f9" type="text/html" width=100% height=99%>')
+                );
+            });
+            $('#a_HGF3').click(() => {
+                setActive('#a_HGF3');
+                $container.html(
+                    $('<object data="HGF3.html" style="background-color:#f9f9f9" type="text/html" width=100% height=99%>')
+                );
+            });
+            $('#a_HGF4').click(() => {
+                setActive('#a_HGF4');
+                $container.html(
+                    $('<object data="HGF4.html" style="background-color:#f9f9f9" type="text/html" width=100% height=99%>')
+                );
+            });
+            $('#btn_add_schedule').click(() => {
+                $('#repeat_collapse').collapse('hide');
+                $('#add_date').collapse('show');
+                $('#add_form')[0].reset();
+                $('#modal_add_schedule').modal();
+            });
+        });
+    </script>
+</body>
+</html>
