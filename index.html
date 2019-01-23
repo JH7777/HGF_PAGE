@@ -5,21 +5,22 @@
     <link rel="icon" href="images/lion.png">
     <title>HGF</title>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@coreui/coreui@2.0.0-rc.1/dist/js/coreui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js" integrity="sha256-Z1d5nX6+IwGjjkkYg+fWe/jzvJae4NYejTz7PcIumxE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-    <script src="https://jh7777.github.io/HGF/lib/scheduler.min.js"></script>
+    <script src="lib/scheduler.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sprintf/1.1.1/sprintf.min.js" integrity="sha256-eVgCKximJ7hwWhTBw52jq3541BGK6y88M79oQxJt4Jk=" crossorigin="anonymous"></script>
-    <script src="https://jh7777.github.io/HGF/lib/selectize.js"></script>
+    <script src="lib/selectize.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui@2.0.0-rc.1/dist/css/coreui.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
-    <link rel="stylesheet" href="https://jh7777.github.io/HGF/lib/selectize.css">
+    <link rel="stylesheet" href="lib/selectize.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
 
     <script>
         const config = {
@@ -27,7 +28,8 @@
         };
         firebase.initializeApp(config);
     </script>
-    <script src="https://jh7777.github.io/HGF/timeline.js"></script>
+    <script src="timeline.js"></script>
+    <script src="addschedule.js"></script>
 
     <style>
         .logo {
@@ -51,6 +53,9 @@
         .aside-menu {
             overflow: hidden;
         }
+        .font {
+	    font-family: 'Archivo Black', sans-serif;
+	}
     </style>
 </head>
 <body class="app sidebar-show aside-menu-show">
@@ -59,7 +64,7 @@
             <span class="fas fa-bars" style="color: #777;"></span>
         </button>
 	<div style="margin:auto">
-        <font size="6em">Hierarchical Gaussian Filter</font>
+        <font class="font" size="6em">Hierarchical Gaussian Filter</font>
        
     </header>
     <div class="app-body">
